@@ -14,12 +14,12 @@ def addpage(request):
     return render(request, "encyclopedia/addpage.html")
 
 def converting_to_html(title):
-    page = util.get_entry(title)
-    html = markdown(page)
+    content = util.get_entry(title)
+    html = markdown(content)
     return html
 
 def entry(request, title):
-    html_page = converting_to_html(title)
+    html_content = converting_to_html(title)
     return render(request, "encyclopedia/wiki.html", {
-        "page": html_page
+        "content": html_content
     })
