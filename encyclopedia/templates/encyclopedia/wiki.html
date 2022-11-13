@@ -5,5 +5,7 @@
 {% endblock %}
 
 {% block body %}
+    {% autoescape off %}
     {{ content }}
+    {% endautoescape %}
 {% endblock %}

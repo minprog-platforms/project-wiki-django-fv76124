@@ -6,15 +6,16 @@
 
 {% block body %}
     <h1>Add page</h1>
-    <div class="textareas">
-        <h4> Insert title: </h4>
-        <textarea  class="titlearea" style=" min-width:500px; max-width:90%;min-height:50px;height:100%;width:100%;" ></textarea>
-        <!-- <h4> Insert short summary: </h4>
-        <textarea  class="summaryearea" style=" min-width:500px; max-width:90%;min-height:100px;height:100%;width:100%;" ></textarea>     -->
-        <h4> Insert text: </h4>
-        <textarea  class="textarea" style=" min-width:500px; max-width:90%;min-height:250px;height:100%;width:100%;" ></textarea> 
-    </div>
-    <input type="submit" value=""
+    <form action="/wiki/save-page" method="post">
+        {% csrf_token %}
+        <div class="textareas">
+            <h4> Insert title: </h4>
+            <textarea name="title" class="add-page-textarea"></textarea>
+            <h4> Insert text: </h4>
+            <textarea name="content" class="add-page-textarea large" ></textarea> 
+        </div>
+        <input type="submit" value="Save" />
+    </form>
 
     
 {% endblock %}

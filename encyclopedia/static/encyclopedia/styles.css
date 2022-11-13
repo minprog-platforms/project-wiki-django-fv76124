@@ -36,3 +36,15 @@ textarea {
 .sidebar h2 {
     margin-top: 5px;
 }
+
+.add-page-textarea {
+    min-width:500px; 
+    max-width:90%; 
+    min-height:50px; 
+    height:100%; 
+    width:100%;
+}
+
+.add-page-textarea.large {
+    min-height: 200px;
+}
