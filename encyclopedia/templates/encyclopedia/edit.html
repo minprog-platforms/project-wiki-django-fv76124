@@ -1,15 +1,16 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    Add page
+   {{ title }} 
 {% endblock %}
 
 {% block body %}
-    <h1>Add page</h1>
-    <form action="/wiki/save-page" method="post">
+<h1>Edit page</h1>
+    <form action="/wiki/save-edit" method="post">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="save">
+    <input type="submit" value="save">
     </form>
-
 {% endblock %}
+
+

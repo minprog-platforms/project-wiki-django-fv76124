@@ -8,4 +8,8 @@
     {% autoescape off %}
     {{ content }}
     {% endautoescape %}
+    <form action="/wiki/edit" method="post">
+        {% csrf_token %}
+    <input type="submit" value="Edit">
+    </form>
 {% endblock %}
